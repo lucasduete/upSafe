@@ -1,4 +1,4 @@
-package io.github.recursivejr.discenteVivo.factories;
+package io.github.lucasduete.upSafe.factories;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
