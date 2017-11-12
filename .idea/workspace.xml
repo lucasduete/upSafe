@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad7dfd42-e611-4c31-b524-b1fa10b9fa00" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/MyApplication.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/MyApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/dao/UsuarioDao.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/dao/UsuarioDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/infraSecurity/CORSFilter.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/infraSecurity/CORSFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/infraSecurity/FilterDetect.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/infraSecurity/FilterDetect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/infraSecurity/Security.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/infraSecurity/Security.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/UserController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +17,8 @@
       <file leaf-file-name="UsuarioDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/dao/UsuarioDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="-181">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1510449812564" expanded="true" signature="496:553" ph="INSERT INTO Usuario... " />
@@ -40,8 +36,8 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="63" column="5" lean-forward="false" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+            <state relative-caret-position="420">
+              <caret line="53" column="13" lean-forward="true" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -334,12 +330,12 @@
       <option name="presentableId" value="Default" />
       <updated>1510441192602</updated>
       <workItem from="1510441195603" duration="521000" />
-      <workItem from="1510438266303" duration="8356000" />
+      <workItem from="1510438266303" duration="8765000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8877000" />
+    <option name="totallyTimeSpent" value="9286000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="6" />
@@ -583,8 +579,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/dao/UsuarioDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="-181">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1510449812564" expanded="true" signature="496:553" ph="INSERT INTO Usuario... " />
@@ -600,8 +596,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="63" column="5" lean-forward="false" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+        <state relative-caret-position="420">
+          <caret line="53" column="13" lean-forward="true" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

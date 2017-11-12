@@ -63,5 +63,51 @@ public class UserController {
         }
     }
 
+    @DELETE
+    @Security
+    @Path("removerUsuario/{idUsuario}")
+    public Response removerUsuario(@PathParam("idUsuario") int idUsuario,
+                                   @Context ContainerRequestContext requestContext) {
+
+        if(!FilterDetect.checkToken(requestContext))
+            return Response.status(Response.Status.UNAUTHORIZED).build();
+
+        UsuarioDao usuarioDao = new UsuarioDao();
+
+        try {
+            usuarioDao.remover(idUsuario);
+
+            return Response.status(Response.Status.OK).build();
+        } catch (SQLException ex) {
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        } catch (ClassNotFoundException ex) {
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+        }
+
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("checaUsuario/{idUsuario}")
+    public Response getUsuario(@PathParam("idUsuario") int idUsuario,
+                               @Context ContainerRequestContext requestContext) {
+
+        if(!FilterDetect.checkToken(requestContext))
+            return Response.status(Response.Status.UNAUTHORIZED).build();
+
+        UsuarioDao usuarioDao = new UsuarioDao();
+
+        try {
+            Usuario user = usuarioDao.getUsuario(idUsuario);
+
+            return Response.ok(user).build();
+        } catch (SQLException ex) {
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        } catch (ClassNotFoundException ex) {
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+        }
+
+    }
+
 }
 
