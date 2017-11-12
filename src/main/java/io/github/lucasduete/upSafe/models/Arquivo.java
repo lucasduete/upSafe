@@ -4,17 +4,28 @@ import java.util.Arrays;
 
 public class Arquivo {
 
+    private int id;
     private String nome;
-    private byte[] content;
+    private String content;
     private int tamanho;
 
     public Arquivo() {
+
     }
 
-    public Arquivo(String nome, byte[] content, int tamanho) {
+    public Arquivo(int id, String nome, String content, int tamanho) {
+        this.id = id;
         this.nome = nome;
         this.content = content;
         this.tamanho = tamanho;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -25,11 +36,11 @@ public class Arquivo {
         this.nome = nome;
     }
 
-    public byte[] getContent() {
+    public String getContent() {
         return content;
     }
 
-    public void setContent(byte[] content) {
+    public void setContent(String content) {
         this.content = content;
     }
 
@@ -48,15 +59,17 @@ public class Arquivo {
 
         Arquivo arquivo = (Arquivo) o;
 
+        if (id != arquivo.id) return false;
         if (tamanho != arquivo.tamanho) return false;
         if (!nome.equals(arquivo.nome)) return false;
-        return Arrays.equals(content, arquivo.content);
+        return content != null ? content.equals(arquivo.content) : arquivo.content == null;
     }
 
     @Override
     public int hashCode() {
-        int result = nome.hashCode();
-        result = 31 * result + Arrays.hashCode(content);
+        int result = id;
+        result = 31 * result + nome.hashCode();
+        result = 31 * result + (content != null ? content.hashCode() : 0);
         result = 31 * result + tamanho;
         return result;
     }
@@ -64,8 +77,9 @@ public class Arquivo {
     @Override
     public String toString() {
         return "Arquivo{" +
-                "nome='" + nome + '\'' +
-                ", content=" + Arrays.toString(content) +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", content='" + content + '\'' +
                 ", tamanho=" + tamanho +
                 '}';
     }
