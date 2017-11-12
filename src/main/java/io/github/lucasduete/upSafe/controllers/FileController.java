@@ -43,4 +43,33 @@ public class FileController {
 
     }
 
+    @GET
+    @Security
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("downloadArquivo/{idArquivo}")
+    public Response download(@PathParam("idArquivo") int idArquivo,
+                             @Context ContainerRequestContext requestContext) {
+
+        if(!FilterDetect.checkToken(requestContext))
+            return Response.status(Response.Status.UNAUTHORIZED).build();
+
+        ArquivoDao arquivoDao = new ArquivoDao();
+
+        try {
+            Arquivo file = arquivoDao.getArquivo(idArquivo);
+
+            if(file.getIdUsuario() != Integer.parseInt(FilterDetect.getToken(requestContext)))
+                return Response.status(Response.Status.UNAUTHORIZED).build();
+
+            return Response.ok(file).build();
+        } catch (SQLException | NullPointerException e) {
+            e.printStackTrace();
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+        }
+
+    }
+
 }
