@@ -11,9 +11,8 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.sql.SQLException;
-import java.util.concurrent.RecursiveTask;
 
-@Path("user")
+@Path("usuario")
 public class UserController {
 
     @POST
@@ -84,7 +83,7 @@ public class UserController {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("checaUsuario/{idUsuario}")
+    @Path("checarUsuario/{idUsuario}")
     public Response getUsuario(@PathParam("idUsuario") int idUsuario,
                                @Context ContainerRequestContext requestContext) {
 
