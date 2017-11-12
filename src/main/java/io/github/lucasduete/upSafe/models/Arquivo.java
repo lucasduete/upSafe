@@ -8,16 +8,18 @@ public class Arquivo {
     private String nome;
     private String content;
     private int tamanho;
+    private int idUsuario;
 
     public Arquivo() {
 
     }
 
-    public Arquivo(int id, String nome, String content, int tamanho) {
+    public Arquivo(int id, String nome, String content, int tamanho, int idUsuario) {
         this.id = id;
         this.nome = nome;
         this.content = content;
         this.tamanho = tamanho;
+        this.idUsuario = idUsuario;
     }
 
     public int getId() {
@@ -52,6 +54,14 @@ public class Arquivo {
         this.tamanho = tamanho;
     }
 
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -61,16 +71,18 @@ public class Arquivo {
 
         if (id != arquivo.id) return false;
         if (tamanho != arquivo.tamanho) return false;
+        if (idUsuario != arquivo.idUsuario) return false;
         if (!nome.equals(arquivo.nome)) return false;
-        return content != null ? content.equals(arquivo.content) : arquivo.content == null;
+        return content.equals(arquivo.content);
     }
 
     @Override
     public int hashCode() {
         int result = id;
         result = 31 * result + nome.hashCode();
-        result = 31 * result + (content != null ? content.hashCode() : 0);
+        result = 31 * result + content.hashCode();
         result = 31 * result + tamanho;
+        result = 31 * result + idUsuario;
         return result;
     }
 
@@ -81,6 +93,7 @@ public class Arquivo {
                 ", nome='" + nome + '\'' +
                 ", content='" + content + '\'' +
                 ", tamanho=" + tamanho +
+                ", idUsuario=" + idUsuario +
                 '}';
     }
 }

@@ -17,7 +17,7 @@ public class ArquivoDao {
 
     public boolean salvar(Arquivo arquivo) throws SQLException, ClassNotFoundException {
 
-        String sql = "INSERT INTO Arquivo (Nome, Content, Tamanho) VALUES (?,?,?);";
+        String sql = "INSERT INTO Arquivo (Nome, Content, Tamanho, IdUsuario) VALUES (?,?,?,?);";
 
         try (Connection conn = Conexao.getConnection()) {
             PreparedStatement stmt = conn.prepareStatement(sql);
@@ -25,6 +25,7 @@ public class ArquivoDao {
             stmt.setString(1, arquivo.getNome());
             stmt.setString(2, arquivo.getContent());
             stmt.setInt(3, arquivo.getTamanho());
+            stmt.setInt(4, arquivo.getIdUsuario());
 
             stmt.executeUpdate();
 
@@ -53,6 +54,7 @@ public class ArquivoDao {
                 file.setNome(rs.getString("Nome"));
                 file.setId(rs.getInt("Id"));
                 file.setTamanho(rs.getInt("Tamanho"));
+                file.setIdUsuario(rs.getInt("idUsuario"));
 
                 arquivos.add(file);
             }
@@ -83,6 +85,7 @@ public class ArquivoDao {
                 arquivo.setNome(rs.getString("Nome"));
                 arquivo.setContent(rs.getString("Content"));
                 arquivo.setTamanho(rs.getInt("Tamanho"));
+                arquivo.setIdUsuario(rs.getInt("idUsuario"));
             }
 
             rs.close();
