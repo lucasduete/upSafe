@@ -1,4 +1,4 @@
-package io.github.recursivejr.discenteVivo.infraSecurity;
+package io.github.lucasduete.upSafe.infraSecurity;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

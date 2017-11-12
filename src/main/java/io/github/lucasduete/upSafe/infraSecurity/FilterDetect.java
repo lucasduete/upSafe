@@ -1,4 +1,4 @@
-package io.github.recursivejr.discenteVivo.infraSecurity;
+package io.github.lucasduete.upSafe.infraSecurity;
 
 import java.io.IOException;
 
@@ -15,7 +15,7 @@ import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.SecurityContext;
 import javax.ws.rs.ext.Provider;
 
-import io.github.recursivejr.discenteVivo.controllers.LoginController;
+import io.github.lucasduete.upSafe.controllers.LoginController;
 import io.jsonwebtoken.Claims;
 
 @Security
@@ -75,46 +75,17 @@ public class FilterDetect implements ContainerRequestFilter{
 			});
 	}
 
-	//Retorna false se nao for admin, retorna true se for admin
-	public static boolean checkAdmin(ContainerRequestContext requestContext) {
-		//Passa o Request pelo filtro de Token, se lançar a exeption entao o token não é valido
+	public static boolean checkToken(ContainerRequestContext requestContext) {
+
 		try {
 			new FilterDetect().filter(requestContext);
 
-			/*
-				Verifica com base no token se é um administrador, apenas administradores posuem email no token
-					logo a condição de parada é possuir um "@" no token
-			*/
-			if(!requestContext.getSecurityContext().getUserPrincipal().getName().contains("@"))
-				throw new IOException("Não é Administrador");
+			Integer.parseInt(requestContext.getSecurityContext().getUserPrincipal().getName());
 
 			return true;
-
-		} catch (IOException ioEx) {
-			ioEx.printStackTrace();
-			Logger.getLogger("AdministradorController-log").info("Erro:" + ioEx.getStackTrace());
-			return false;
-		}
-	}
-
-
-	public static boolean checkAluno(ContainerRequestContext requestContext) {
-		//Passa o Request pelo filtro de Token, se lançar a exeption entao o token não é valido
-		try {
-			new FilterDetect().filter(requestContext);
-
-			/*
-				Verifica com base no token se é um aluno, apenas administradores posuem email no token
-					logo a condição de teste é possuir um "@" no token
-			 */
-			if(requestContext.getSecurityContext().getUserPrincipal().getName().contains("@"))
-				throw new IOException("Não é Aluno");
-
-			return true;
-
-		} catch (IOException ioEx) {
-			ioEx.printStackTrace();
-			Logger.getLogger("AlunoController-log").info("Erro:" + ioEx.getStackTrace());
+		} catch (NumberFormatException | IOException Ex) {
+			Ex.printStackTrace();
+			Logger.getLogger("LoginController-log").info("Erro:" + Ex.getStackTrace());
 			return false;
 		}
 	}

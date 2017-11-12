@@ -2,6 +2,7 @@ package io.github.lucasduete.upSafe.dao;
 
 import io.github.lucasduete.upSafe.factories.Conexao;
 import io.github.lucasduete.upSafe.models.Usuario;
+import io.github.lucasduete.upSafe.resources.Encryption;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -103,5 +104,38 @@ public class UsuarioDao {
 
         }
         return true;
+    }
+
+    public Usuario login(String login, String senha) throws SQLException, ClassNotFoundException {
+
+        Usuario user= null;
+
+        String sql = "SELECT Id, Nome, Email, Password FROM Usuario WHERE Login ILIKE ?;";
+
+        Connection conn = Conexao.getConnection();
+        PreparedStatement stmt = conn.prepareStatement(sql);
+
+        stmt.setString(1, login);
+
+        ResultSet rs = stmt.executeQuery();
+
+        if(!rs.next())
+            throw new SQLException("Credenciais Inválidas");
+
+
+        if(Encryption.checkPassword(senha, rs.getString("Senha"))) {
+            user.setId(rs.getInt("Id"));
+            user.setNome(rs.getString("Nome"));
+            user.setEmail(rs.getString("Email"));
+            user.setPassword(rs.getString("Password"));
+        }
+        else
+            throw new SQLException("Credenciais Inválidas");
+
+        rs.close();
+        stmt.close();
+        conn.close();
+
+        return user;
     }
 }
