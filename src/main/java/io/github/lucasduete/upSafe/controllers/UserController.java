@@ -17,7 +17,7 @@ public class UserController {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    @Path("casdastrarUsuario/")
+    @Path("cadastrarUsuario/")
     public Response cadastrarUsuario(Usuario user) {
 
         UsuarioDao usuarioDao = new UsuarioDao();
@@ -26,7 +26,7 @@ public class UserController {
             usuarioDao.salvar(user);
 
             return Response.status(Response.Status.OK).build();
-        } catch (SQLException e) {
+        } catch (SQLException | NullPointerException e) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         } catch (ClassNotFoundException e) {
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
