@@ -12,6 +12,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 @Path("arquivo")
 public class FileController {
@@ -72,4 +73,28 @@ public class FileController {
 
     }
 
+    @GET
+    @Security
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("listarArquivos/")
+    public Response listaArquivos(@Context ContainerRequestContext requestContext) {
+
+        if(!FilterDetect.checkToken(requestContext))
+            return Response.status(Response.Status.UNAUTHORIZED).build();
+
+        ArquivoDao arquivoDao = new ArquivoDao();
+
+        try {
+            ArrayList<Arquivo> arquivos = arquivoDao.listar(Integer.parseInt(FilterDetect.getToken(requestContext)));
+
+            return Response.ok(arquivos).build();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+        }
+
+    }
 }
