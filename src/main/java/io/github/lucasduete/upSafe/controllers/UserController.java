@@ -17,13 +17,9 @@ import java.util.concurrent.RecursiveTask;
 public class UserController {
 
     @POST
-    @Security
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("casdastrarUsuario/")
-    public Response cadastrarUsuario(Usuario user, @Context ContainerRequestContext requestContext) {
-
-        if(!FilterDetect.checkToken(requestContext))
-            return Response.status(Response.Status.UNAUTHORIZED).build();
+    public Response cadastrarUsuario(Usuario user) {
 
         UsuarioDao usuarioDao = new UsuarioDao();
 
