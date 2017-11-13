@@ -22,7 +22,7 @@ import java.util.Date;
 @Path("login")
 public class LoginController {
 
-    private final String SECRETKEY = "FSM#STUD3NT-V01C3@K3Y/CR1PT";
+    private final String SECRETKEY = "LUc4sUpS4f3@K3Y/CR1PT";
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)

@@ -108,7 +108,7 @@ public class UsuarioDao {
 
     public Usuario login(String email, String senha) throws SQLException, ClassNotFoundException {
 
-        Usuario user= null;
+        Usuario user = null;
 
         String sql = "SELECT * FROM Usuario WHERE Email ILIKE ?;";
 
@@ -124,6 +124,7 @@ public class UsuarioDao {
 
 
         if(Encryption.checkPassword(senha, rs.getString("Password"))) {
+            user = new Usuario();
             user.setId(rs.getInt("Id"));
             user.setNome(rs.getString("Nome"));
             user.setEmail(rs.getString("Email"));

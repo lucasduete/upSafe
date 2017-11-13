@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad7dfd42-e611-4c31-b524-b1fa10b9fa00" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/LoginController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/dao/UsuarioDao.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/dao/UsuarioDao.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,17 +18,39 @@
       <file leaf-file-name="UsuarioDao.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/dao/UsuarioDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="126" column="33" lean-forward="true" selection-start-line="126" selection-start-column="33" selection-end-line="126" selection-end-column="33" />
+            <state relative-caret-position="-391">
+              <caret line="84" column="20" lean-forward="true" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1510539261675" expanded="true" signature="496:553" ph="INSERT INTO Usuario... " />
-                <marker date="1510539261675" expanded="true" signature="1082:1091" ph="SELECT Arqui... " />
-                <marker date="1510539261675" expanded="true" signature="1082:1116" ph="SELECT * FRO... Usuario" />
-                <marker date="1510539261675" expanded="true" signature="1847:1886" ph="DELETE FROM " />
-                <marker date="1510539261675" expanded="true" signature="1912:1944" ph="DELETE FROM " />
-                <marker date="1510539261675" expanded="true" signature="2375:2440" ph="UPDATE Usuar... " />
-                <marker date="1510539261675" expanded="true" signature="3054:3095" ph="SELECT Id, N... Usuario" />
+                <marker date="1510541045060" expanded="true" signature="496:553" ph="INSERT INTO Usuario... " />
+                <marker date="1510541045060" expanded="true" signature="1082:1091" ph="SELECT Arqui... " />
+                <marker date="1510541045060" expanded="true" signature="1082:1116" ph="SELECT * FRO... Usuario" />
+                <marker date="1510541045060" expanded="true" signature="1847:1886" ph="DELETE FROM " />
+                <marker date="1510541045060" expanded="true" signature="1912:1944" ph="DELETE FROM " />
+                <marker date="1510541045060" expanded="true" signature="2375:2440" ph="UPDATE Usuar... " />
+                <marker date="1510541045060" expanded="true" signature="3055:3096" ph="SELECT Id, N... Usuario" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CORSFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/infraSecurity/CORSFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="46" column="65" lean-forward="true" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,9 +121,9 @@
         <option value="$PROJECT_DIR$/ScriptBD.sql" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/models/Arquivo.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/dao/ArquivoDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/FileController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/dao/UsuarioDao.java" />
       </list>
     </option>
@@ -335,12 +357,12 @@
       <workItem from="1510441195603" duration="521000" />
       <workItem from="1510438266303" duration="9354000" />
       <workItem from="1510522883308" duration="9011000" />
-      <workItem from="1510539103563" duration="166000" />
+      <workItem from="1510539103563" duration="1559000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19052000" />
+    <option name="totallyTimeSpent" value="20445000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="6" />
@@ -393,13 +415,13 @@
           <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1510539261675" expanded="true" signature="496:553" ph="INSERT INTO Usuario... " />
-            <marker date="1510539261675" expanded="true" signature="1082:1091" ph="SELECT Arqui... " />
-            <marker date="1510539261675" expanded="true" signature="1082:1116" ph="SELECT * FRO... Usuario" />
-            <marker date="1510539261675" expanded="true" signature="1847:1886" ph="DELETE FROM " />
-            <marker date="1510539261675" expanded="true" signature="1912:1944" ph="DELETE FROM " />
-            <marker date="1510539261675" expanded="true" signature="2375:2440" ph="UPDATE Usuar... " />
-            <marker date="1510539261675" expanded="true" signature="3054:3095" ph="SELECT Id, N... Usuario" />
+            <marker date="1510541045060" expanded="true" signature="496:553" ph="INSERT INTO Usuario... " />
+            <marker date="1510541045060" expanded="true" signature="1082:1091" ph="SELECT Arqui... " />
+            <marker date="1510541045060" expanded="true" signature="1082:1116" ph="SELECT * FRO... Usuario" />
+            <marker date="1510541045060" expanded="true" signature="1847:1886" ph="DELETE FROM " />
+            <marker date="1510541045060" expanded="true" signature="1912:1944" ph="DELETE FROM " />
+            <marker date="1510541045060" expanded="true" signature="2375:2440" ph="UPDATE Usuar... " />
+            <marker date="1510541045060" expanded="true" signature="3055:3096" ph="SELECT Id, N... Usuario" />
           </folding>
         </state>
       </provider>
@@ -438,13 +460,13 @@
           <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1510539261675" expanded="true" signature="496:553" ph="INSERT INTO Usuario... " />
-            <marker date="1510539261675" expanded="true" signature="1082:1091" ph="SELECT Arqui... " />
-            <marker date="1510539261675" expanded="true" signature="1082:1116" ph="SELECT * FRO... Usuario" />
-            <marker date="1510539261675" expanded="true" signature="1847:1886" ph="DELETE FROM " />
-            <marker date="1510539261675" expanded="true" signature="1912:1944" ph="DELETE FROM " />
-            <marker date="1510539261675" expanded="true" signature="2375:2440" ph="UPDATE Usuar... " />
-            <marker date="1510539261675" expanded="true" signature="3054:3095" ph="SELECT Id, N... Usuario" />
+            <marker date="1510541045060" expanded="true" signature="496:553" ph="INSERT INTO Usuario... " />
+            <marker date="1510541045060" expanded="true" signature="1082:1091" ph="SELECT Arqui... " />
+            <marker date="1510541045060" expanded="true" signature="1082:1116" ph="SELECT * FRO... Usuario" />
+            <marker date="1510541045060" expanded="true" signature="1847:1886" ph="DELETE FROM " />
+            <marker date="1510541045060" expanded="true" signature="1912:1944" ph="DELETE FROM " />
+            <marker date="1510541045060" expanded="true" signature="2375:2440" ph="UPDATE Usuar... " />
+            <marker date="1510541045060" expanded="true" signature="3055:3096" ph="SELECT Id, N... Usuario" />
           </folding>
         </state>
       </provider>
@@ -592,14 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/infraSecurity/CORSFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/infraSecurity/FilterDetect.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
@@ -642,16 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-676">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="28" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1215">
@@ -680,19 +684,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/dao/UsuarioDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/infraSecurity/CORSFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="126" column="33" lean-forward="true" selection-start-line="126" selection-start-column="33" selection-end-line="126" selection-end-column="33" />
+          <caret line="46" column="65" lean-forward="true" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1510539261675" expanded="true" signature="496:553" ph="INSERT INTO Usuario... " />
-            <marker date="1510539261675" expanded="true" signature="1082:1091" ph="SELECT Arqui... " />
-            <marker date="1510539261675" expanded="true" signature="1082:1116" ph="SELECT * FRO... Usuario" />
-            <marker date="1510539261675" expanded="true" signature="1847:1886" ph="DELETE FROM " />
-            <marker date="1510539261675" expanded="true" signature="1912:1944" ph="DELETE FROM " />
-            <marker date="1510539261675" expanded="true" signature="2375:2440" ph="UPDATE Usuar... " />
-            <marker date="1510539261675" expanded="true" signature="3054:3095" ph="SELECT Id, N... Usuario" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/dao/UsuarioDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-391">
+          <caret line="84" column="20" lean-forward="true" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1510541045060" expanded="true" signature="496:553" ph="INSERT INTO Usuario... " />
+            <marker date="1510541045060" expanded="true" signature="1082:1091" ph="SELECT Arqui... " />
+            <marker date="1510541045060" expanded="true" signature="1082:1116" ph="SELECT * FRO... Usuario" />
+            <marker date="1510541045060" expanded="true" signature="1847:1886" ph="DELETE FROM " />
+            <marker date="1510541045060" expanded="true" signature="1912:1944" ph="DELETE FROM " />
+            <marker date="1510541045060" expanded="true" signature="2375:2440" ph="UPDATE Usuar... " />
+            <marker date="1510541045060" expanded="true" signature="3055:3096" ph="SELECT Id, N... Usuario" />
           </folding>
         </state>
       </provider>
