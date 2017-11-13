@@ -24,7 +24,7 @@ public class UsuarioDao {
 
             stmt.setString(1, user.getNome());
             stmt.setString(2, user.getEmail());
-            stmt.setString(3, user.getPassword());
+            stmt.setString(3, Encryption.encrypt(user.getPassword()));
 
             stmt.executeUpdate();
 
@@ -94,7 +94,7 @@ public class UsuarioDao {
 
             stmt.setString(1, user.getNome());
             stmt.setString(2, user.getEmail());
-            stmt.setString(3, user.getPassword());
+            stmt.setString(3, Encryption.encrypt(user.getPassword()));
             stmt.setInt(4, user.getId());
 
             stmt.executeUpdate();
@@ -106,16 +106,16 @@ public class UsuarioDao {
         return true;
     }
 
-    public Usuario login(String login, String senha) throws SQLException, ClassNotFoundException {
+    public Usuario login(String email, String senha) throws SQLException, ClassNotFoundException {
 
         Usuario user= null;
 
-        String sql = "SELECT Id, Nome, Email, Password FROM Usuario WHERE Login ILIKE ?;";
+        String sql = "SELECT * FROM Usuario WHERE Email ILIKE ?;";
 
         Connection conn = Conexao.getConnection();
         PreparedStatement stmt = conn.prepareStatement(sql);
 
-        stmt.setString(1, login);
+        stmt.setString(1, email);
 
         ResultSet rs = stmt.executeQuery();
 
@@ -123,11 +123,10 @@ public class UsuarioDao {
             throw new SQLException("Credenciais Inválidas");
 
 
-        if(Encryption.checkPassword(senha, rs.getString("Senha"))) {
+        if(Encryption.checkPassword(senha, rs.getString("Password"))) {
             user.setId(rs.getInt("Id"));
             user.setNome(rs.getString("Nome"));
             user.setEmail(rs.getString("Email"));
-            user.setPassword(rs.getString("Password"));
         }
         else
             throw new SQLException("Credenciais Inválidas");
