@@ -42,6 +42,7 @@ public class LoginController {
             return Response.ok(user).build();
 
         } catch(SQLException ex) {
+            ex.printStackTrace();
 
             if(ex.getMessage().contains("Credenciais Inválidas"))
                 return Response.status(Response.Status.UNAUTHORIZED).build();
@@ -49,6 +50,7 @@ public class LoginController {
                 return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 
         } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
         }
 

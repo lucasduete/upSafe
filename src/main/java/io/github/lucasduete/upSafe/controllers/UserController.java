@@ -27,8 +27,10 @@ public class UserController {
 
             return Response.status(Response.Status.OK).build();
         } catch (SQLException | NullPointerException e) {
+            e.printStackTrace();
             return Response.status(Response.Status.BAD_REQUEST).build();
         } catch (ClassNotFoundException e) {
+            e.printStackTrace();
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
         }
     }
@@ -52,8 +54,10 @@ public class UserController {
 
             return Response.status(Response.Status.OK).build();
         } catch (SQLException e) {
+            e.printStackTrace();
             return Response.status(Response.Status.BAD_REQUEST).build();
         } catch (ClassNotFoundException e) {
+            e.printStackTrace();
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
         }
     }
@@ -74,8 +78,10 @@ public class UserController {
 
             return Response.status(Response.Status.OK).build();
         } catch (SQLException ex) {
+            ex.printStackTrace();
             return Response.status(Response.Status.BAD_REQUEST).build();
         } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
         }
 
@@ -97,8 +103,10 @@ public class UserController {
 
             return Response.ok(user).build();
         } catch (SQLException ex) {
+            ex.printStackTrace();
             return Response.status(Response.Status.BAD_REQUEST).build();
         } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
             return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
         }
 
