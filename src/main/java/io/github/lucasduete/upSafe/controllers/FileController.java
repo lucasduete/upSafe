@@ -5,8 +5,6 @@ import io.github.lucasduete.upSafe.infraSecurity.FilterDetect;
 import io.github.lucasduete.upSafe.infraSecurity.Security;
 import io.github.lucasduete.upSafe.models.Arquivo;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.validation.constraints.Null;
 import javax.ws.rs.*;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.core.Context;
