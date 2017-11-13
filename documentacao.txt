@@ -1,0 +1,53 @@
+login/loginUsuario/{email}/{senha}/
+Metodo POST
+Retorna Objeto Usuario que fez Login
+
+usuario/cadastrarUsuario/
+Metodo POST
+Recebe Objeto Usuario
+OBJETOS
+
+Usuario :
+	int id
+	String nome
+	String email
+	String password
+
+Arquivo:
+	int id
+	int idUsuario (dono do arquivo)
+	String Nome
+	String Content (Conteudo em Base64)
+	int Tamanho
+
+
+METODOS:
+
+usuario/atualizarUsuario/
+Metodo PUT
+Metodo Seguro
+Recebe Objeto Usuario
+    
+usuario/removerUsuario/{idUsuario}/
+Metodo DELETE
+Metodo Seguro
+
+usuario/checarUsuario/{idUsuario}/
+Metodo GET
+Metodo Seguro
+Retorna Objeto Usuario
+
+arquivo/uploadArquivo/
+Metodo POST
+Metodo Seguro
+Recebe Objeto Arquivo (Não é necessário passar a idUsuario)
+
+arquivo/downloadArquivo/{idArquivo}/
+Metodo GET
+Metodo Seguro
+Retorna Objeto Arquivo
+
+arquivo/listarArquivos/
+Metodo GET
+Metodo Seguro
+Retorna Lista de Arquivos para o Usuario Logado
