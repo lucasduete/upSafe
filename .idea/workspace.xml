@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad7dfd42-e611-4c31-b524-b1fa10b9fa00" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/FileController.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/FileController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/dao/ArquivoDao.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/dao/ArquivoDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/LoginController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,11 +45,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FileController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/FileController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="524">
               <caret line="129" column="5" lean-forward="true" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,13 +124,13 @@
         <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/infraSecurity/CORSFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/infraSecurity/Security.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/dao/UsuarioDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/infraSecurity/FilterDetect.java" />
         <option value="$PROJECT_DIR$/ScriptBD.sql" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/models/Arquivo.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/dao/ArquivoDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/FileController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/LoginController.java" />
       </list>
     </option>
   </component>
@@ -351,12 +362,12 @@
       <updated>1510441192602</updated>
       <workItem from="1510441195603" duration="521000" />
       <workItem from="1510438266303" duration="9354000" />
-      <workItem from="1510522883308" duration="7079000" />
+      <workItem from="1510522883308" duration="7200000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16954000" />
+    <option name="totallyTimeSpent" value="17075000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="6" />
@@ -539,16 +550,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/UsuarioController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/infraSecurity/Security.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -684,6 +685,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="524">
           <caret line="129" column="5" lean-forward="true" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/lucasduete/upSafe/controllers/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

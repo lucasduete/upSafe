@@ -26,7 +26,7 @@ public class LoginController {
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("loginUser/{email}/{senha}/")
+    @Path("loginUsuario/{email}/{senha}/")
     public Response loginAluno(@PathParam("email") String login, @PathParam("senha") String senha) {
 
         try {
