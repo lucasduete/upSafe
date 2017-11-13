@@ -97,7 +97,7 @@ public class ArquivoDao {
 
     }
 
-    private boolean remover(int id) throws SQLException, ClassNotFoundException {
+    public boolean remover(int id) throws SQLException, ClassNotFoundException {
 
         String sql = "DELETE * FROM Arquivo WHERE ID = ?";
 
@@ -114,7 +114,7 @@ public class ArquivoDao {
 
     }
 
-    private boolean atualizar(Arquivo arquivo) throws SQLException, ClassNotFoundException {
+    public boolean atualizar(Arquivo arquivo) throws SQLException, ClassNotFoundException {
 
         String sql = "UPDATE Arquivo SET Nome = ?, Content = ?, Tamanho = ? WHERE Id = ?";
 

@@ -5,6 +5,7 @@ import io.github.lucasduete.upSafe.infraSecurity.FilterDetect;
 import io.github.lucasduete.upSafe.infraSecurity.Security;
 import io.github.lucasduete.upSafe.models.Arquivo;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import javax.validation.constraints.Null;
 import javax.ws.rs.*;
 import javax.ws.rs.container.ContainerRequestContext;
@@ -88,6 +89,36 @@ public class FileController {
             ArrayList<Arquivo> arquivos = arquivoDao.listar(Integer.parseInt(FilterDetect.getToken(requestContext)));
 
             return Response.ok(arquivos).build();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+        }
+
+    }
+
+    @DELETE
+    @Security
+    @Path("removerArquivo/{idArquivo}")
+    public Response removerArquivo(@PathParam("idArquivo") int idArquivo,
+                                   @Context ContainerRequestContext requestContext) {
+
+        if(!FilterDetect.checkToken(requestContext))
+            return Response.status(Response.Status.UNAUTHORIZED).build();
+
+        ArquivoDao arquivoDao = new ArquivoDao();
+
+        try {
+
+            if (arquivoDao.getArquivo(idArquivo).getIdUsuario() !=
+                    Integer.parseInt(FilterDetect.getToken(requestContext)))
+                return Response.status(Response.Status.UNAUTHORIZED).build();
+
+            arquivoDao.remover(idArquivo);
+
+            return Response.status(Response.Status.OK).build();
         } catch (SQLException e) {
             e.printStackTrace();
             return Response.status(Response.Status.BAD_REQUEST).build();
