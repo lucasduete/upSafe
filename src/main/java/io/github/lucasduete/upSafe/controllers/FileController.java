@@ -65,6 +65,9 @@ public class FileController {
         try {
             Arquivo file = arquivoDao.getArquivo(idArquivo);
 
+            if (file == null)
+                return Response.status(Response.Status.NO_CONTENT).build();
+
             if(file.getIdUsuario() != Integer.parseInt(FilterDetect.getToken(requestContext)))
                 return Response.status(Response.Status.UNAUTHORIZED).build();
 
