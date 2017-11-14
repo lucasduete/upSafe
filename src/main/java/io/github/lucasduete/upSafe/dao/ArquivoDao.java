@@ -54,8 +54,6 @@ public class ArquivoDao {
                 file.setNome(rs.getString("Nome"));
                 file.setId(rs.getInt("Id"));
                 file.setTamanho(rs.getInt("Tamanho"));
-                file.setIdUsuario(rs.getInt("idUsuario"));
-
                 arquivos.add(file);
             }
 
