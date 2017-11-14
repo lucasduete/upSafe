@@ -77,6 +77,8 @@ public class ArquivoDao {
         try (Connection conn = Conexao.getConnection()) {
             PreparedStatement stmt = conn.prepareStatement(sql);
 
+            stmt.setInt(1, id);
+
             ResultSet rs = stmt.executeQuery();
 
             while(rs.next()) {
