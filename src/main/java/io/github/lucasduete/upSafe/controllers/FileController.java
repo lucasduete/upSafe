@@ -27,13 +27,14 @@ public class FileController {
         if(!FilterDetect.checkToken(requestContext))
             return Response.status(Response.Status.UNAUTHORIZED).build();
 
-        int idUsuario = Integer.parseInt(FilterDetect.getToken(requestContext));
-
-        ArquivoDao arquivoDao = new ArquivoDao();
-
         if (!(file.getNome().contains("png") || file.getNome().contains("jpeg") || file.getNome().contains("jpg")
                 || file.getNome().contains("pdf") || file.getNome().contains("mp4") || file.getNome().contains("mp3")))
             return Response.status(415).build();
+
+        int idUsuario = Integer.parseInt(FilterDetect.getToken(requestContext));
+        file.setIdUsuario(idUsuario);
+
+        ArquivoDao arquivoDao = new ArquivoDao();
 
         try {
             arquivoDao.salvar(file);
