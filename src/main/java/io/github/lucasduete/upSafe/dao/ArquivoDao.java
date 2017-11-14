@@ -106,6 +106,8 @@ public class ArquivoDao {
         try (Connection conn = Conexao.getConnection()) {
             PreparedStatement stmt = conn.prepareStatement(sql);
 
+            stmt.setInt(1, id);
+
             stmt.executeUpdate();
 
             stmt.close();
@@ -126,6 +128,7 @@ public class ArquivoDao {
              stmt.setString(1, arquivo.getNome());
              stmt.setString(2, arquivo.getContent());
              stmt.setInt(3, arquivo.getTamanho());
+             stmt.setInt(4, arquivo.getId());
 
              stmt.executeUpdate();
 
