@@ -99,7 +99,7 @@ public class ArquivoDao {
 
     public boolean remover(int id) throws SQLException, ClassNotFoundException {
 
-        String sql = "DELETE * FROM Arquivo WHERE ID = ?";
+        String sql = "DELETE FROM Arquivo WHERE ID = ?";
 
         try (Connection conn = Conexao.getConnection()) {
             PreparedStatement stmt = conn.prepareStatement(sql);
