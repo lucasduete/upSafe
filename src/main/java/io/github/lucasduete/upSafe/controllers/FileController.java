@@ -71,21 +71,35 @@ public class FileController {
             if(file.getIdUsuario() != Integer.parseInt(FilterDetect.getToken(requestContext)))
                 return Response.status(Response.Status.UNAUTHORIZED).build();
 
-
             if(file.getNome().contains("mp3"))
-                return Response.ok(FileManagement.decodeFile(file.getContent()), "audio/mp3").build();
+                return Response
+                     .ok(FileManagement.decodeFile(file.getContent()), "audio/mp3")
+                    .header("Content-Disposition", "attachment; filename=" + file.getNome())
+                    .build();
 
             if(file.getNome().contains("pdf"))
-                return Response.ok(FileManagement.decodeFile(file.getContent()), "application/pdf").build();
+                return Response
+                        .ok(FileManagement.decodeFile(file.getContent()), "application/pdf")
+                        .header("Content-Disposition", "attachment; filename=" + file.getNome())
+                        .build();
 
-            if(file.getNome().contains("jpg"))
-                return Response.ok(FileManagement.decodeFile(file.getContent()), "image/jpg").build();
+            if(file.getNome().contains("jpg") || file.getNome().contains("jpeg"))
+                return Response
+                        .ok(FileManagement.decodeFile(file.getContent()), "image/jpg")
+                        .header("Content-Disposition", "attachment; filename=" + file.getNome())
+                        .build();
 
             if(file.getNome().contains("png"))
-                return Response.ok(FileManagement.decodeFile(file.getContent()), "image/png").build();
+                return Response
+                        .ok(FileManagement.decodeFile(file.getContent()), "image/png")
+                        .header("Content-Disposition", "attachment; filename=" + file.getNome())
+                        .build();
 
             if(file.getNome().contains("mp4"))
-                return Response.ok(FileManagement.decodeFile(file.getContent()), MediaType.APPLICATION_OCTET_STREAM).build();
+                return Response
+                        .ok(FileManagement.decodeFile(file.getContent()), MediaType.APPLICATION_OCTET_STREAM)
+                        .header("Content-Disposition", "attachment; filename=" + file.getNome())
+                        .build();
 
             return Response.status(415).build();
 
